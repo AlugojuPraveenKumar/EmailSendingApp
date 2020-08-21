@@ -1,73 +1,51 @@
+body {
+    background: linear-gradient(to right, #2a2a72 0%, #20BF55
+ 100%);
+}
 .main-container{
-    margin: 50px auto ;
-    border: 2px solid black; 
-    width:40%;
-    background-color: white;
-    
+    margin: 50px auto;
 }
 .form-heading{
-    margin: auto;
-    text-align: center;
+   text-align: center;
     background-color: #FF1493;
     color: white;
-    font-size: 20px;
-    padding: 10px;   
+    padding: 20px;
+    font-size: bold;
 }
-.user-input-wrp {
-	position: relative;
-    width: 90%;
-    margin: auto;
+.row .col.user-input-wrp {
+    float: none;
+    margin: 18px auto;
 }
-.user-input-wrp .inputText{
-	width: 100%;
-	outline: none;
-	border:none;
-	border-bottom: 1px solid #777;
-    box-shadow: none !important;
-    font-size: 10px;
-    margin: 20px auto;
-    
+.user-input-wrp .inputText.is-invalid{
+    border-color: red;
 }
-.user-input-wrp .inputText:focus{
-	border-color: blue;
-	border-width: medium medium 1px;
+.btns {
+    margin: 50px 10px 30px;
 }
-.user-input-wrp .floating-label {
-	position: absolute;
-	pointer-events: none;
-	top:40px;
-	left: 0px;
-    transition: 0.2s ease all;
-    color:gray;
-    font-size: 10px;
+.enclave-mail {
+  display: block;
+  margin: 30px auto;
+  text-align: center;
 }
-.user-input-wrp input:focus ~ .floating-label,
-.user-input-wrp input:not(:focus):valid ~ .floating-label{
-	top: 25px;
-	left: 0px;
-	font-size: 10px;
-    opacity: 1;
-    
+.loader {
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  position: relative;
+  margin: 50px auto;
 }
-.send-btn,.reset-btn{
-    border: none;
-    outline: none;
-    background-color: #FF1493;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 8px 30px;
-    font-size: 12px;
-    margin: 50px 0;
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
-.reset-btn{
-    float: right;
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-.btns{
-    margin: auto;
-    width: 90%;
-}  
-.reset-icon,
-.send-icon{
-    margin-left: 10px;
-}  

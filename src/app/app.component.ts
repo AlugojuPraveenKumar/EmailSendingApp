@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
-import {User} from './User';
+import { Component, ViewEncapsulation } from "@angular/core";
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'EmailSendingApp';
-  userModel = new User('','','')
+  headerTitle: string = "Send New Email";
+
+  constructor() {}
+
+  ngOnInit() {
+  }
+
+
+ 
 }

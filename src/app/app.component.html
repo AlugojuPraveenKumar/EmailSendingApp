@@ -1,29 +1,10 @@
-<div class='main-body'>
-  <div class='main-container'>
-    <form #userForm="ngForm">
-      <div class='form-heading'>Send New Email</div>
-      <div class="form-group user-input-wrp">
-        <br/>
-        <input type="text" class="inputText" required/>
-        <label class="floating-label">To :</label>
-      </div>
-      <div class="form-group user-input-wrp">
-        <br/>
-        <input type="text" class="inputText" required/>
-        <label class="floating-label">Sub :</label>
-      </div>
-      <div class="form-group user-input-wrp">
-        <br/>
-        <input type="text" class="inputText" required/>
-        <label class="floating-label">Message</label>
-      </div>
-      <br>
-      <div class='btns'>
-        <button class='send-btn'>Send <span class="glyphicon glyphicon-send send-icon"></span> </button>
-        <button class='reset-btn'>Reset <span class="glyphicon glyphicon-trash reset-icon"></span></button>
-      </div>
-    </form>
-  </div>
-</div>  
-
-
+<div class='main-container'>
+	<div class="row">
+		<div class="offset-m2 col s12 m8">
+			<div class="card">
+				<div class='form-heading card-title'>{{headerTitle}}</div>
+				<app-form></app-form>
+			</div>
+		</div>
+	</div>
+</div>

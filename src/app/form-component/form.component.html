@@ -1,0 +1,23 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+	<div class='card-content'>
+		<div class="input-field col s12 user-input-wrp">
+			<input type="text"required autocomplete ='off' id='email' formControlName="email" name='email' class="form-control inputText" (blur)="emailFld = false" (focus)="emailFld = true" [ngClass]="{ 'is-invalid': form.email.touched && form.email.errors }" />
+			<label for="email"  [ngClass]="{'active':emailFld || form.email.value}">To :</label>
+		</div>
+		<div class="input-field col s12 user-input-wrp">
+			<input type="text" required autocomplete ='off' id='subject' formControlName="subject" name='subject' class="form-control inputText" (blur)="subjectFld = false" (focus)="subjectFld = true" [ngClass]="{ 'is-invalid': form.subject.touched && form.subject.errors }"  />
+			<label for="subject" [ngClass]="{'active':subjectFld || form.subject.value}">Subject :</label>
+		</div>
+		<div class="input-field col s12 user-input-wrp">
+			<input type="text" required autocomplete ='off' id='message' formControlName="message" name='message' class="form-control inputText" (blur)="messageFld = false" (focus)="messageFld = true" [ngClass]="{ 'is-invalid': form.message.touched && form.message.errors }" />
+			<label for="message"  [ngClass]="{'active':messageFld || form.message.value}">Message</label>
+		</div>
+		<div *ngIf="submitted" class="loader"></div>
+		<div class="enclave-mail"> <i class="material-icons" *ngIf="!submitted && isMailSuccess">drafts</i></div>
+		<div class='btns'>
+			<button class="btn waves-effect pink darken-2" [disabled]="registerForm.invalid" type="submit" name="action">Send <i class="material-icons right">send</i> </button>
+			<button class='btn waves-effect waves-light right' type="reset" (click)="onReset()">Reset  <i class="material-icons right">delete</i></button>
+
+		</div>
+	</div>
+</form>
